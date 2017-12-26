@@ -3,15 +3,12 @@
 <head>
   <title>WEB1 - HTML</title>
   <meta charset="utf-8">
+  <script src='colors.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
-  <input type="button" value="night" onClick =
-    "document.querySelector('body').style.backgroundColor='black';
-     document.querySelector('body').style.color='white';"/>
-  <input type="button" value="day" onClick =
-    "document.querySelector('body').style.backgroundColor='white';
-     document.querySelector('body').style.color='black';"/>
+  <input type="button" id="night_day" value="night" onClick ="nightDayHandler(this);"/>
   <ol>
     <li><a href="1.html">HTML</a></li>
     <li><a href="2.html">CSS</a></li>
@@ -23,6 +20,42 @@
   </p><p style="margin-top:45px;">HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects, such as interactive forms, may be embedded into the rendered page. It provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets.
   </p>
   <p>
+
+  <ul>
+    <script>
+      var coworkers = ['AA','BB','CC','DD'];
+      var i = 0;
+      while(i<coworkers.length){
+        document.write("<li>"+coworkers[i]+"</li>");
+        i++;
+      }
+      document.write("<p>");
+
+      var people = { 'programmer':'sophie', 'designer':'leezche'};
+      document.write(people.programmer+"<br>");
+      document.write(people.designer+"<br>");
+      people.bookeeper = "duru";
+      document.write(people.bookeeper+"<br>");
+      people["data scientist"] = "kim";
+      document.write(people["data scientist"]+"<br>");
+      document.write("<p>");
+
+      for (var key in people) {
+        document.write(key+":"+people[key]+"<br>");
+      }
+      document.write("<p>");
+
+      people.showAll = function() {
+        for(var key in this) {
+          document.write(key+":"+this[key]+"<br>");
+        }
+      }
+      people.showAll();
+    </script>
+
+  </ul>
+
+
     <div id="disqus_thread"></div>
 <script>
 
